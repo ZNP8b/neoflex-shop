@@ -1,23 +1,11 @@
 import Card from "./components/Card/Card";
-
+import Header from "./components/Header/Header";
 
 function App() {
   return (
     <div className="wrapper">
       <div className="content" >
-      <header>
-            <div className="headerLeft">
-                <p>QPICK</p>
-            </div>
-            <ul className="headerRight">
-                <li>
-                    <img width={22} height={20} src="img/fav.svg" />
-                </li>
-                <li>
-                    <img width={22} height={20} src="img/cart.svg" />
-                </li>
-            </ul>
-        </header>
+        <Header />
         <h1>Наушники</h1>
         <div className="cards">
           <Card img="img/1.jpg" name="Apple BYZ S852I" price="2927" rating="4.7" />
@@ -29,9 +17,9 @@ function App() {
         </div>
         <h1>Беспроводные наушники</h1>
         <div className="cards">
-        <Card img="img/4.jpg" name="Apple AirPods" price="9527" rating="4.7" />
-        <Card img="img/5.jpg" name="GERLAX GH-04" price="6527" rating="4.7" />
-        <Card img="img/6.jpg" name="BOROFONE BO4" price="7527" rating="4.7" />
+          <Card img="img/4.jpg" name="Apple AirPods" price="9527" rating="4.7" />
+          <Card img="img/5.jpg" name="GERLAX GH-04" price="6527" rating="4.7" />
+          <Card img="img/6.jpg" name="BOROFONE BO4" price="7527" rating="4.7" />
         </div>
       </div>
       <footer>
