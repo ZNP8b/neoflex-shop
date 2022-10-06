@@ -4,14 +4,18 @@ function Header() {
     return (
         <header>
             <div className={styles.headerLeft}>
-                <p>QPICK</p>
+                <a href="/">
+                    <p>QPICK</p>
+                </a>
             </div>
             <ul className={styles.headerRight}>
                 <li>
                     <img width={22} height={20} src="img/fav.svg" />
                 </li>
                 <li>
-                    <img width={22} height={20} src="img/cart.svg" />
+                    <a href="/cart">
+                        <img width={22} height={20} src="img/cart.svg" />
+                    </a>
                 </li>
             </ul>
         </header>
