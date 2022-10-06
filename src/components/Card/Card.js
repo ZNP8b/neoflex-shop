@@ -1,3 +1,5 @@
+import styles from "./Card.module.scss";
+console.log(styles);
 
 function Card(props) {
     const onClickBuy = () => {
@@ -5,17 +7,17 @@ function Card(props) {
     }
 
     return (
-        <div className="card" >
-            <div className="product" >
-                <img src={props.img} className="product_picture" />
+        <div className={styles.card} >
+            <div className={styles.product} >
+                <img src={props.img} className={styles.product_picture} />
             </div>
-            <div className="card_content">
-                <div className="card_content_title">
-                    <p className="name">{props.name}</p>
-                    <p className="price">{props.price} ₽</p>
+            <div className={styles.card_content}>
+                <div className={styles.card_content_title}>
+                    <p className={styles.name}>{props.name}</p>
+                    <p className={styles.price}>{props.price} ₽</p>
                 </div>
-                <div className="card_content_purchase">
-                    <div className="card_content_rating">
+                <div className={styles.card_content_purchase}>
+                    <div className={styles.card_content_rating}>
                         <img src="img/star.svg" />
                         <p>{props.rating}</p>
                     </div>
