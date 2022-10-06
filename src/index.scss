@@ -56,7 +56,6 @@ header {
 
 .content {
 
-
   h1 {
     font-family: 'Montserrat';
     font-weight: 600;
@@ -71,68 +70,4 @@ header {
     flex-wrap: wrap;
     margin-bottom: 30px;
   }
-}
-
-footer {
-  width: 1080px;
-  height: 149px;
-  margin-left: 17px;
-
-  background: #FFFFFF;
-  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
-  border-radius: 30px 30px 0px 0px;
-
-  display: flex;
-  justify-content: space-between;
-
-  .footerLogo {
-    p {
-      font-family: 'Montserrat';
-      font-weight: 700;
-      font-size: 25px;
-      color: #101010;
-      margin-top: 29px;
-      margin-left: 29px;
-    }
-  }
-
-  .footerLinks {
-    display: flex;
-    margin-top: 25px;
-
-    .footerLang {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      padding-left: 170px;
-      margin-top: 15px;
-
-      .footerLang_icon {
-        display: flex;
-        padding-top: 35px;
-        padding-right: 20px;
-
-        .footerLang_icon_mid {
-          margin: 0 17px;
-        }
-      }
-    }
-
-  }
-
-  .footerSocial {
-    ul {
-      display: flex;
-    }
-
-    li {
-      margin-top: 34px;
-      margin-right: 17px;
-    }
-
-    li:last-child {
-      margin-right: 26px;
-    }
-  }
-
 }

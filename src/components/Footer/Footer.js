@@ -1,13 +1,14 @@
+import styles from "./Footer.module.scss";
 
 function Footer() {
     return (
         <footer>
 
-            <div className="footerLogo" >
+            <div className={styles.footerLogo} >
                 <p>QPICK</p>
             </div>
 
-            <div className="footerLinks">
+            <div className={styles.footerLinks}>
                 <div>
                     <p>
                         <a href="#">Избранное</a>
@@ -20,13 +21,13 @@ function Footer() {
                     </p>
                 </div>
 
-                <div className="footerLang">
+                <div className={styles.footerLang}>
                     <div>
                         <a href="#">Условия сервиса</a>
                     </div>
-                    <div className="footerLang_icon">
+                    <div className={styles.footerLang_icon}>
                         <img src="img/lang.svg" />
-                        <div className="footerLang_icon_mid">
+                        <div className={styles.footerLang_icon_mid}>
                             <a href="#">Рус</a>
                         </div>
                         <div>
@@ -36,7 +37,7 @@ function Footer() {
                 </div>
             </div>
 
-            <div className="footerSocial">
+            <div className={styles.footerSocial}>
                 <ul>
                     <li>
                         <img src="img/VK.svg" />
