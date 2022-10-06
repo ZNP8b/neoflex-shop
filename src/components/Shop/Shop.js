@@ -20,8 +20,8 @@ const data_Wireless = [
 export function Shop() {
     return (
         <div>
+            <Header />
             <div className="content" >
-                <Header />
                 <h1>Наушники</h1>
                 <div className="cards">
 

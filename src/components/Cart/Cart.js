@@ -5,6 +5,7 @@ export function Cart() {
     return (
         <div>
             <Header />
+            <div className="content">Test</div>
             <Footer />
         </div>
     );
