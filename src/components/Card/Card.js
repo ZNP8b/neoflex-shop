@@ -1,5 +1,9 @@
 
 function Card(props) {
+    const onClickBuy = () => {
+        alert(props.name + ' ' + props.rating)
+    }
+
     return (
         <div className="card" >
             <div className="product" >
@@ -15,7 +19,7 @@ function Card(props) {
                         <img src="img/star.svg" />
                         <p>{props.rating}</p>
                     </div>
-                    <a href="#">Купить</a>
+                    <a href="#" onClick={onClickBuy}>Купить</a>
                 </div>
             </div>
         </div>
