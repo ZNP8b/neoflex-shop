@@ -1,11 +1,12 @@
+import styles from "./Header.module.scss";
 
 function Header() {
     return (
         <header>
-            <div className="headerLeft">
+            <div className={styles.headerLeft}>
                 <p>QPICK</p>
             </div>
-            <ul className="headerRight">
+            <ul className={styles.headerRight}>
                 <li>
                     <img width={22} height={20} src="img/fav.svg" />
                 </li>

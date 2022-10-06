@@ -1,0 +1,23 @@
+header {
+  display: flex;
+  justify-content: space-between;
+
+  .headerLeft {
+
+    p {
+      font-family: 'Montserrat';
+      font-weight: 700;
+      font-size: 25px;
+      color: #101010;
+    }
+  }
+
+  .headerRight {
+    display: flex;
+
+    li {
+      margin-right: 30px;
+      margin-top: 20px;
+    }
+  }
+}
