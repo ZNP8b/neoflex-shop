@@ -24,7 +24,7 @@ let data = {
 
   cartPage: {
     cart_data: [
-      { img: "img/1.jpg", name: "Apple BYZ S852I", price: "2 927", fullPrice: "2 927" },
+      { img: "img/1.jpg", name: "Apple BYZ S852I", price: "2 927", fullPrice: "2 927" }
     ]
   }
 }
