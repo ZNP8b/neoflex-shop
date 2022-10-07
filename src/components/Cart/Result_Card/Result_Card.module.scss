@@ -23,6 +23,10 @@
         cursor: pointer;
     }
 
+    button:hover {
+        background: #535353;
+    }
+
     .finalPrice {
         display: flex;
         justify-content: space-between;
