@@ -16,7 +16,7 @@ let data = {
     ],
 
     data_Wireless: [
-      { img: "img/4.jpg", name: "Apple AirPods", price: "9527", rating: "4.7" },
+      { img: "img/4.jpg", name: "Apple AirPods", price: "9527", rating: "4.7"},
       { img: "img/5.jpg", name: "GERLAX GH-04", price: "6527", rating: "4.7" },
       { img: "img/6.jpg", name: "BOROFONE BO4", price: "7527", rating: "4.7" },
     ]
@@ -24,7 +24,7 @@ let data = {
 
   cartPage: {
     cart_data: [
-      { img: "img/1.jpg", name: "Apple BYZ S852I", price: "2 927", fullPrice: "2 927" }
+      // { img: "img/1.jpg", name: "Apple BYZ S852I", price: "2 927", fullPrice: "2 927" }
     ]
   }
 }
