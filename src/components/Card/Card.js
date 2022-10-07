@@ -21,7 +21,7 @@ function Card(props) {
                         <img src="img/star.svg" />
                         <p>{props.rating}</p>
                     </div>
-                    <a href="#" onClick={onClickBuy}>Купить</a>
+                    <a onClick={onClickBuy}>Купить</a>
                 </div>
             </div>
         </div>
