@@ -4,17 +4,16 @@ import Card from "../Card/Card"
 import Footer from "../Footer/Footer"
 
 export function Shop(props) {
-const [quantity, setQuantity] = React.useState(0);
 
     return (
         <div>
-            <Header quantity={quantity} />
+            <Header quantity={props.quantity} />
             <div className="content" >
                 <h1>Наушники</h1>
                 <div className="cards">
 
                     {props.shopData.data_Wired.map((val) => (
-                        <Card onAdd={props.onAdd} onClickBuy={() => setQuantity(quantity + 1)} item={val} />
+                        <Card onAdd={props.onAdd} onClickBuy={props.onClickBuy} item={val} />
                     ))}
 
                 </div>
@@ -22,7 +21,7 @@ const [quantity, setQuantity] = React.useState(0);
                 <div className="cards">
 
                     {props.shopData.data_Wireless.map((val) => (
-                        <Card onAdd={props.onAdd} onClickBuy={() => setQuantity(quantity + 1)} item={val} />
+                        <Card onAdd={props.onAdd} onClickBuy={props.onClickBuy} item={val} />
                     ))}
 
                 </div>
