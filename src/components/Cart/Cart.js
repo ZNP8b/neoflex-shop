@@ -14,7 +14,7 @@ export function Cart(props) {
                     <div className={styles.cart_cards}>
                         {
                             props.cartData.cart_data.map((val) => (
-                                <Cart_Card img={val.img} name={val.name} price={val.price} />
+                                <Cart_Card item={val} />
                             ))
                         }
                     </div>
