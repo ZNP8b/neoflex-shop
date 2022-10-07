@@ -7,14 +7,14 @@ import Result_Card from "./Result_Card/Result_Card";
 export function Cart(props) {
     return (
         <div>
-            <Header />
+            <Header quantity={props.quantity} />
             <div className="content">
                 <h2>Корзина</h2>
                 <div className={styles.cart_content}>
                     <div className={styles.cart_cards}>
                         {
                             props.cartData.cart_data.map((val) => (
-                                <Cart_Card img={val.img} name={val.name} price={val.price} fullPrice={val.fullPrice} />
+                                <Cart_Card img={val.img} name={val.name} price={val.price} />
                             ))
                         }
                     </div>
