@@ -1,6 +1,6 @@
 import styles from "./Header.module.scss";
 
-function Header() {
+function Header(props) {
     return (
         <header>
             <div className={styles.headerLeft}>
@@ -16,7 +16,7 @@ function Header() {
                     <a href="/cart">
                         <img width={22} height={20} src="img/cart.svg" />
                     </a>
-                    <p className={styles.cartIconQuantity}>1</p>
+                    <p className={styles.cartIconQuantity}>{props.quantity == 0 ? null : props.quantity}</p>
                 </li>
             </ul>
         </header>
