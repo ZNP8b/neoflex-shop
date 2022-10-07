@@ -17,7 +17,10 @@ function Card(props) {
                         <img src="img/star.svg" />
                         <p>{props.item.rating}</p>
                     </div>
-                    <a onClick={props.onClickBuy}>Купить</a>
+                    <a onClick={() => (
+                        props.onClickBuy(),
+                        props.onAdd(props.item)
+                    )}>Купить</a>
                 </div>
             </div>
         </div>

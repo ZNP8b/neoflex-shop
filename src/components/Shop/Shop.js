@@ -14,7 +14,7 @@ const [quantity, setQuantity] = React.useState(0);
                 <div className="cards">
 
                     {props.shopData.data_Wired.map((val) => (
-                        <Card onClickBuy={() => setQuantity(quantity + 1)} item={val} />
+                        <Card onAdd={props.onAdd} onClickBuy={() => setQuantity(quantity + 1)} item={val} />
                     ))}
 
                 </div>
@@ -22,7 +22,7 @@ const [quantity, setQuantity] = React.useState(0);
                 <div className="cards">
 
                     {props.shopData.data_Wireless.map((val) => (
-                        <Card onClickBuy={() => setQuantity(quantity + 1)} item={val} />
+                        <Card onAdd={props.onAdd} onClickBuy={() => setQuantity(quantity + 1)} item={val} />
                     ))}
 
                 </div>
