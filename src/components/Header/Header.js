@@ -16,6 +16,7 @@ function Header() {
                     <a href="/cart">
                         <img width={22} height={20} src="img/cart.svg" />
                     </a>
+                    <p className={styles.cartIconQuantity}>1</p>
                 </li>
             </ul>
         </header>

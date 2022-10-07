@@ -18,6 +18,20 @@ header {
     li {
       margin-right: 30px;
       margin-top: 20px;
+
+      .cartIconQuantity {
+        font-family: "Montserrat";
+        font-weight: 500;
+        position: absolute;
+        margin: 0;
+        top: 11px;
+        margin-left: 13px;
+        color: white;
+        background-color: #FFA542;
+        border-radius: 50%;
+        padding: 0px 7px;
+        font-size: 15px;
+      }
     }
   }
 }
