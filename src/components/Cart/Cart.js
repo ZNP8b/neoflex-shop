@@ -14,7 +14,7 @@ export function Cart() {
                     <div className={styles.cart_cards}>
                         <Cart_Card img="img/1.jpg" name="Apple BYZ S852I" price="2 927" fullPrice="2 927" />
                     </div>
-                    <Result_Card />
+                    <Result_Card fullPrice="2 927" />
                 </div>
             </div>
             <Footer />
