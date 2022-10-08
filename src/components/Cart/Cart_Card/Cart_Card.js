@@ -11,12 +11,14 @@ function Cart_Card(props) {
                 <div className={styles.quantityIcons}>
                     <img onClick={() => (
                         props.changeQuantity(props.id, "minus"),
-                        setItemQuantity(props.item.quantity)
+                        setItemQuantity(props.item.quantity),
+                        props.setResultFullPrice(props.changeFullPrice)
                     )} width={36} height={30} src="img/minus.svg" />
                     <p className={styles.quantity}>{itemQuantity}</p>
                     <img onClick={() => (
                         props.changeQuantity(props.id, "plus"),
-                        setItemQuantity(props.item.quantity)
+                        setItemQuantity(props.item.quantity),
+                        props.setResultFullPrice(props.changeFullPrice)
                     )} width={36} height={30} src="img/plus.svg" />
                 </div>
             </div>
@@ -29,7 +31,8 @@ function Cart_Card(props) {
             <div className={styles.rightSide}>
                 <img className={styles.deleteButton} width={21} height={17} src="img/delete.svg" onClick={() => (
                     props.deleteFromOrder(props.id),
-                    props.onClickDelete()
+                    props.onClickDelete(),
+                    props.setResultFullPrice(props.changeFullPrice)
                 )} />
                 <p className={styles.fullPrice}>{props.item.price * props.item.quantity} ₽</p>
             </div>
