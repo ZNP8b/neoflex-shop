@@ -1,8 +1,11 @@
-import React from "react";
+import React, { useEffect } from "react";
 import styles from "./Cart_Card.module.scss";
 
 function Cart_Card(props) {
     const [itemQuantity, setItemQuantity] = React.useState(props.item.quantity)
+    React.useEffect(() => {
+        setItemQuantity(props.item.quantity)
+    })
 
     return (
         <div className={styles.cart_card}>
