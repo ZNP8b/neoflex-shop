@@ -23,7 +23,9 @@ function App(props) {
     if (operator == "plus") {
       props.data.cartPage.cart_data[id].quantity++;
     } else {
-      props.data.cartPage.cart_data[id].quantity--;
+      if (props.data.cartPage.cart_data[id].quantity > 0) {
+        props.data.cartPage.cart_data[id].quantity--;
+      }
     }
     sessionStorage.setItem("order_items", JSON.stringify(props.data.cartPage.cart_data));
   }
