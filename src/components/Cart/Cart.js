@@ -1,3 +1,4 @@
+import React from "react";
 import Header from "../Header/Header";
 import Footer from "../Footer/Footer";
 import styles from "./Cart.module.scss";
@@ -5,6 +6,7 @@ import Cart_Card from "./Cart_Card/Cart_Card";
 import Result_Card from "./Result_Card/Result_Card";
 
 export function Cart(props) {
+    let id = 0;
     return (
         <div>
             <Header quantity={props.quantity} />
@@ -14,11 +16,11 @@ export function Cart(props) {
                     <div className={styles.cart_cards}>
                         {
                             props.cartData.cart_data.map((val) => (
-                                <Cart_Card item={val} />
+                                <Cart_Card onClickDelete={props.onClickDelete} deleteFromOrder={props.deleteFromOrder} item={val} id={id++} />
                             ))
                         }
                     </div>
-                    <Result_Card fullPrice="2 927" />
+                    {props.quantity > 0 ? <Result_Card fullPrice="2 927" /> : null}
                 </div>
             </div>
             <Footer />
