@@ -28,11 +28,17 @@ function App(props) {
     sessionStorage.setItem("order_items", JSON.stringify(props.data.cartPage.cart_data));
   }
 
+  const changeFullPrice = () => {
+    let fullPrice = 0;
+    props.data.cartPage.cart_data.forEach(el => fullPrice += Number.parseFloat(el.price * el.quantity))
+    return (fullPrice)
+  }
+
     return (
       <div className="wrapper">
         <Routes>
           <Route path="/" element={<Shop quantity={quantity} onClickBuy={() => setQuantity(quantity + 1)} onAdd={addToOrder} shopData={props.data.shopPage} />} />
-          <Route path="/cart" element={<Cart changeQuantity={changeQuantity} deleteFromOrder={deleteFromOrder} quantity={quantity} onClickDelete={() => setQuantity(quantity - 1)} cartData={props.data.cartPage} />} />
+          <Route path="/cart" element={<Cart changeFullPrice={changeFullPrice} changeQuantity={changeQuantity} deleteFromOrder={deleteFromOrder} quantity={quantity} onClickDelete={() => setQuantity(quantity - 1)} cartData={props.data.cartPage} />} />
         </Routes>
       </div>
     );
