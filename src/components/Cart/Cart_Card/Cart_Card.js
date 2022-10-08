@@ -1,14 +1,23 @@
+import React from "react";
 import styles from "./Cart_Card.module.scss";
 
 function Cart_Card(props) {
+    const [itemQuantity, setItemQuantity] = React.useState(props.item.quantity)
+
     return (
         <div className={styles.cart_card}>
             <div className={styles.leftSide}>
                 <img width={146} height={136} src={props.item.img} />
                 <div className={styles.quantityIcons}>
-                    <img width={36} height={30} src="img/minus.svg" />
-                    <p className={styles.quantity}>{props.item.quantity}</p>
-                    <img width={36} height={30} src="img/plus.svg" />
+                    <img onClick={() => (
+                        props.changeQuantity(props.id, "minus"),
+                        setItemQuantity(props.item.quantity)
+                    )} width={36} height={30} src="img/minus.svg" />
+                    <p className={styles.quantity}>{itemQuantity}</p>
+                    <img onClick={() => (
+                        props.changeQuantity(props.id, "plus"),
+                        setItemQuantity(props.item.quantity)
+                    )} width={36} height={30} src="img/plus.svg" />
                 </div>
             </div>
 
