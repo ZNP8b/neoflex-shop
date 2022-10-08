@@ -18,7 +18,10 @@ function Cart_Card(props) {
             </div>
 
             <div className={styles.rightSide}>
-                <img width={21} height={17} src="img/delete.svg" />
+                <img className={styles.deleteButton} width={21} height={17} src="img/delete.svg" onClick={() => (
+                    props.deleteFromOrder(props.id),
+                    props.onClickDelete()
+                )} />
                 <p className={styles.fullPrice}>{props.item.price * props.item.quantity} ₽</p>
             </div>
         </div>
