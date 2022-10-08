@@ -7,7 +7,7 @@ import Result_Card from "./Result_Card/Result_Card";
 
 export function Cart(props) {
     let fullPrice = 0;
-    props.cartData.cart_data.forEach(el => fullPrice += Number.parseFloat(el.price))
+    props.cartData.cart_data.forEach(el => fullPrice += Number.parseFloat(el.price * el.quantity))
     let id = 0;
     return (
         <div>
@@ -18,7 +18,7 @@ export function Cart(props) {
                     <div className={styles.cart_cards}>
                         {
                             props.cartData.cart_data.map((val) => (
-                                <Cart_Card onClickDelete={props.onClickDelete} deleteFromOrder={props.deleteFromOrder} item={val} id={id++} />
+                                <Cart_Card changeQuantity={props.changeQuantity} onClickDelete={props.onClickDelete} deleteFromOrder={props.deleteFromOrder} item={val} id={id++} />
                             ))
                         }
                     </div>
