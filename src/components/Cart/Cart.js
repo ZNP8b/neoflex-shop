@@ -6,6 +6,8 @@ import Cart_Card from "./Cart_Card/Cart_Card";
 import Result_Card from "./Result_Card/Result_Card";
 
 export function Cart(props) {
+    let fullPrice = 0;
+    props.cartData.cart_data.forEach(el => fullPrice += Number.parseFloat(el.price))
     let id = 0;
     return (
         <div>
@@ -20,7 +22,7 @@ export function Cart(props) {
                             ))
                         }
                     </div>
-                    {props.quantity > 0 ? <Result_Card fullPrice="2 927" /> : null}
+                    {props.quantity > 0 ? <Result_Card fullPrice={fullPrice} /> : null}
                 </div>
             </div>
             <Footer />
